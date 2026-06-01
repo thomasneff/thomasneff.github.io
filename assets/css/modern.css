@@ -1,0 +1,334 @@
+/* Modern design overrides for thomasneff.github.io */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ─── Typography ─────────────────────────────────────────── */
+
+body, input, select, textarea {
+	font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+	color: #555;
+	letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #1a1a1a;
+	font-weight: 600;
+	letter-spacing: -0.025em;
+}
+
+strong, b {
+	color: #2a2a2a;
+	font-weight: 600;
+}
+
+/* ─── Links ──────────────────────────────────────────────── */
+
+a {
+	color: #0d9488;
+	border-bottom: none;
+	text-decoration: none;
+	transition: color 0.15s ease;
+}
+a:hover {
+	color: #0f766e !important;
+	text-decoration: underline;
+}
+
+/* ─── Page background ────────────────────────────────────── */
+
+body {
+	background: #f9fafb;
+}
+
+/* ─── Header / Slideshow ─────────────────────────────────── */
+
+#header {
+	background-color: #0a0f1a;
+	/* override old background-image — slides + overlay handle it */
+	background-image: none;
+	overflow: hidden;
+}
+
+#header-slideshow {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+#header-slideshow::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		160deg,
+		rgba(0, 0, 0, 0.55) 0%,
+		rgba(0, 0, 0, 0.30) 60%,
+		rgba(0, 0, 0, 0.60) 100%
+	);
+	z-index: 1;
+}
+
+#header-slideshow .slide {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 2s ease-in-out;
+}
+
+#header-slideshow .slide.active {
+	opacity: 1;
+}
+
+#header > .inner {
+	position: relative;
+	z-index: 2;
+}
+
+#header > footer {
+	position: relative;
+	z-index: 2;
+}
+
+#header h1 {
+	color: rgba(255, 255, 255, 0.88);
+	font-size: 1.15em;
+	font-weight: 300;
+	line-height: 1.85em;
+	letter-spacing: -0.01em;
+}
+
+#header strong, #header b {
+	color: #fff;
+	font-weight: 600;
+}
+
+#header a {
+	color: #5eead4;
+	border-bottom: none;
+	text-decoration: none;
+}
+
+#header a:hover {
+	color: #99f6e4 !important;
+	text-decoration: none;
+}
+
+/* ─── Main content area ──────────────────────────────────── */
+
+#main {
+	background: #f9fafb;
+}
+
+#main > section {
+	border-top: 1px solid #e5e7eb;
+}
+
+/* Section heading with short teal accent bar */
+#main > section > h2,
+#main section > h2 {
+	color: #111827;
+	font-size: 1.3em;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	margin-bottom: 1.5em;
+	padding-bottom: 0.6em;
+	border-bottom: none;
+	display: block;
+	position: relative;
+}
+
+#main > section > h2::after,
+#main section > h2::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 2.5em;
+	height: 3px;
+	background: #0d9488;
+	border-radius: 2px;
+}
+
+header.major h2 {
+	font-size: 2em;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	color: #111827;
+}
+
+header.major h2::after {
+	display: none;
+}
+
+/* ─── Footer ─────────────────────────────────────────────── */
+
+#footer {
+	background: transparent;
+	border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#footer .copyright {
+	display: none;
+}
+
+/* ─── Buttons ────────────────────────────────────────────── */
+
+.button {
+	border-radius: 9999px;
+	border: 1.5px solid #d1d5db;
+	color: #374151 !important;
+	font-weight: 500;
+	font-size: 0.8em;
+	letter-spacing: 0.01em;
+	padding: 0 1.5em;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	transition: all 0.15s ease;
+}
+
+.button:hover {
+	border-color: #0d9488;
+	color: #0d9488 !important;
+	background: #f0fdfa;
+	box-shadow: 0 2px 8px rgba(13, 148, 136, 0.15);
+}
+
+/* ─── Industry work grid (CSS grid, not floats) ──────────── */
+
+#industry-work .luma-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.25em;
+	margin-top: 0;
+}
+
+@media screen and (max-width: 980px) {
+	#industry-work .luma-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#industry-work .luma-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Fully-clickable card link */
+.work-card-link {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	color: inherit;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+.work-card-link:hover {
+	text-decoration: none;
+}
+
+.work-card-link h3 {
+	color: #111827;
+	transition: color 0.15s ease;
+}
+
+.work-card-link:hover h3 {
+	color: #0d9488 !important;
+}
+
+.work-card-link.no-link {
+	cursor: default;
+}
+
+.card-arrow {
+	font-size: 0.85em;
+	opacity: 0.4;
+	margin-left: 0.2em;
+	transition: opacity 0.15s ease, transform 0.15s ease;
+	display: inline-block;
+}
+
+.work-card-link:hover .card-arrow {
+	opacity: 0.9;
+	transform: translate(2px, -2px);
+}
+
+/* ─── Work items (project cards) ─────────────────────────── */
+
+.work-item {
+	background: #fff;
+	border-radius: 0.75em;
+	padding: 1em;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.05);
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+	margin-bottom: 1.5em;
+}
+
+#industry-work .work-item {
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.work-item:hover {
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	transform: translateY(-2px);
+}
+
+#industry-work .work-item:has(a.work-card-link:hover) {
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	transform: translateY(-2px);
+}
+
+.work-item h3 {
+	color: #111827;
+	font-weight: 600;
+	font-size: 0.95em;
+}
+
+.work-item p {
+	color: #6b7280;
+	line-height: 1.6em;
+	font-size: 0.8em;
+}
+
+/* ─── Code inline ─────────────────────────────────────────── */
+
+code {
+	background: #f0fdf4;
+	border: 1px solid #bbf7d0;
+	border-radius: 0.3em;
+	color: #047857;
+	font-size: 0.82em;
+	padding: 0.15em 0.5em;
+}
+
+/* ─── Tables (publications) ──────────────────────────────── */
+
+table tbody tr:nth-child(2n + 1) {
+	background-color: #f9fafb;
+}
+
+table tbody tr {
+	border-color: #e5e7eb;
+}
+
+/* ─── Subtle image hover overlay ─────────────────────────── */
+
+.image:before {
+	opacity: 0.05;
+}
+
+.image.thumb:hover:before {
+	opacity: 0.7;
+}
+
+/* ─── Section: Get In Touch ──────────────────────────────── */
+
+#three p.icon {
+	font-size: 0.95em;
+	color: #6b7280;
+	margin-bottom: 0.5em;
+}

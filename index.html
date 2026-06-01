@@ -12,15 +12,23 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/bib-publication-list.css"/>
+		<link rel="stylesheet" href="assets/css/modern.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body id="top">
 
-		<!-- Header --> 
+		<!-- Header -->
 			<header id="header">
+				<div id="header-slideshow">
+					<div class="slide active" style="background-image: url('images/thomas-images/rainier1.jpeg')"></div>
+					<div class="slide" style="background-image: url('images/thomas-images/yosemite1.jpeg')"></div>
+					<div class="slide" style="background-image: url('images/thomas-images/seattle1.jpeg')"></div>
+					<div class="slide" style="background-image: url('images/thomas-images/yosemite2.jpeg')"></div>
+					<div class="slide" style="background-image: url('images/thomas-images/redmond1.jpeg')"></div>
+				</div>
 				<div class="inner">
-					<h1><strong>I am Thomas</strong>, PhD Student (Computer Graphics, VR, Deep Learning),<br /> game developer, musician and composer<br />
-					with a love for challenge.
+					<h1><strong>I am Thomas</strong>, Head of Systems Research &amp; Engineering at <a href="https://lumalabs.ai" target="_blank">Luma AI</a>,<br /> researcher, game developer and musician<br />
+					with a love for hard problems.
 					</h1>
 				</div>
 			</header>
@@ -33,27 +41,84 @@
 						<header class="major">
 							<h2>Thomas Neff</h2>
 						</header>
-						<p>I am a VR/Graphics/Vision/ML/Game dev with a passion for games, music and anything programming related. 
-							I'm currently a University Assistant and PhD Student at Graz University of Technology, researching modern real-time methods for VR. 
-							Check out our research projects below for more details. 
-							In my spare time, I like to develop games and modify existing ones by reverse engineering their code or dynamically patching it during runtime. 
-							Finally, I enjoy speedrunning (= completing video games as fast as possible) both as a viewer and as a casual runner, and have contributed several tools to the community.
+						<p>I lead Systems Research &amp; Engineering (Acceleration, Efficiency, Scale for ML/Research) at <a href="https://lumalabs.ai" target="_blank">Luma AI</a>, working on making large-scale training and inference as efficient as possible — from low-level kernel optimizations to architectural improvements that scale workloads to thousands of GPUs.
+						Previously, I was a University Assistant and PhD student at Graz University of Technology, researching the intersection of real-time computer graphics and machine learning including neural rendering and texture-space shading for VR.
+						In my spare time I like to develop games, play music, and contribute tools to the speedrunning and game modding communities.
 						</p>
 						<ul class="actions">
-							<li><a href="resume_neff.pdf" class="button">Resume (Updated November 2022)</a></li>
+							<li><a href="resume_neff.pdf" class="button">Resume</a></li>
 							<li><a href="https://scholar.google.com/citations?user=bZsqNhwAAAAJ&hl=de" class="button">Google Scholar</a></li>
+							<li><a href="https://www.linkedin.com/in/thomasneff93/" class="button">LinkedIn</a></li>
 						</ul>
 					</section>
           <section id="two">
 						<h2>Biography</h2>
 						<div class="row">
             <p>
-            Thomas Neff is a University Assistant and PhD Student at Graz University of Technology, Austria, teaching and researching as a part of the GPU Computing group at the Institute of Computer Graphics and Vision. He has (co-)authored several papers in the domains of real-time texture-space shading (TOG'19, TOG'21), neural rendering (CGF'21) and medical image analysis (MICCAI'18), including a best paper award (OAGM'17). His main research interests include texture-space shading and the intersection between computer graphics and deep learning to advance the state of the art of real-time rendering and streaming via novel neural rendering methods.
+            Thomas Neff is Head of Systems Research &amp; Engineering at Luma AI, where he leads efforts in ML acceleration, training efficiency, and inference optimization at scale — ranging from low-level CUDA optimizations to distributed training and inference systems spanning thousands of GPUs. He has contributed significantly to building and shipping Luma AI's flagship products including 3D Capture (NeRF/Gaussian Splatting) with an Unreal Engine 5 integration, Genie (text &amp; image-to-3D), Dream Machine, Ray2, Ray3, and Uni-1 (multimodal understanding and generation). He gave a talk at the PyTorch Conference 2025 on how modern PyTorch supercharges multimodal training and inference at Luma AI.
             </p>
+            <p>
+            Previously, Thomas was a University Assistant and PhD student at Graz University of Technology, Austria, as part of the GPU Computing group at the Institute of Computer Graphics and Vision. He (co-)authored several papers in the domains of real-time texture-space shading (TOG'19, TOG'21, CGF'22), neural rendering (CGF'21, ECCV'22) and medical image analysis (MICCAI'18), including a best paper award (OAGM'17).
             </p>
             </div>
           </section>
-<!-- Two -->
+<!-- Talks -->
+					<section id="two">
+						<h2>Talks &amp; Presentations</h2>
+						<div class="row">
+							<article class="12u 12u$(xsmall) work-item">
+								<a href="https://www.youtube.com/watch?v=LmpXU8UwREA" target="_blank" class="image fit thumb"><img src="https://img.youtube.com/vi/LmpXU8UwREA/hqdefault.jpg" alt="PyTorch Conference 2025 Talk" /></a>
+								<h3>How Modern PyTorch Supercharges Multimodal Training and Inference at Luma AI</h3>
+								<p><strong>PyTorch Conference 2025</strong> &mdash; October 23, 2025 &bull; San Francisco, CA<br />
+								Covers how Luma AI designed training and inference code that scales across thousands of GPUs using modern PyTorch features including <code>torch.compile</code>, <code>torch.distributed</code>, and custom operations that accelerate multimodal workloads. <a href="https://pytorchconference.sched.com/event/27QDf/how-modern-pytorch-supercharges-multimodal-training-and-inference-at-luma-ai-thomas-neff-luma-ai" target="_blank">Event page</a> &bull; <a href="https://www.youtube.com/watch?v=LmpXU8UwREA" target="_blank">Watch on YouTube</a></p>
+							</article>
+						</div>
+					</section>
+
+				<!-- Industry Work -->
+					<section id="industry-work">
+						<h2>Industry Work at Luma AI</h2>
+						<div class="luma-grid">
+							<article class="work-item">
+								<a href="https://lumalabs.ai/ray3" target="_blank" class="work-card-link">
+									<h3>Ray3 / Ray2 &mdash; Generative Video <span class="card-arrow">&#8599;</span></h3>
+									<p>Large-scale multimodal generative video model training, architecture improvements, and efficient distributed inference at scale.</p>
+								</a>
+							</article>
+							<article class="work-item">
+								<a href="https://lumalabs.ai/uni-1" target="_blank" class="work-card-link">
+									<h3>Uni-1 &mdash; Multimodal Understanding &amp; Generation <span class="card-arrow">&#8599;</span></h3>
+									<p>Large-scale multimodal training, inference, and optimization for Luma AI's unified understanding and generation model.</p>
+								</a>
+							</article>
+							<article class="work-item">
+								<a href="https://lumalabs.ai/photon" target="_blank" class="work-card-link">
+									<h3>Photon &mdash; Image Generation <span class="card-arrow">&#8599;</span></h3>
+									<p>Contributions to Photon and Photon Flash, Luma AI's high-quality, cost-efficient image generation models.</p>
+								</a>
+							</article>
+							<article class="work-item">
+								<a href="https://dream-machine.lumalabs.ai/" target="_blank" class="work-card-link">
+									<h3>Dream Machine &mdash; Video Generation <span class="card-arrow">&#8599;</span></h3>
+									<p>Full-stack contributions to Dream Machine v1, Luma AI's original text-to-video product and the platform that hosts Ray and Photon today.</p>
+								</a>
+							</article>
+							<article class="work-item">
+								<a href="https://www.youtube.com/watch?v=5rW98mMdP6I&pp=ygUNbHVtYSBhaSBnZW5pZQ%3D%3D" target="_blank" class="work-card-link">
+									<h3>Genie &mdash; Text &amp; Image to 3D <span class="card-arrow">&#8599;</span></h3>
+									<p>Research and engineering for Genie, Luma AI's generative 3D AI product turning text and images into interactive 3D assets.</p>
+								</a>
+							</article>
+							<article class="work-item">
+								<a href="https://lumalabs.ai/interactive-scenes" target="_blank" class="work-card-link">
+									<h3>3D Capture / Interactive Scenes <span class="card-arrow">&#8599;</span></h3>
+									<p>Built and shipped Luma AI's 3D Capture product (NeRF/Gaussian Splatting), including design and implementation of the Unreal Engine 5 plugin for real-time NeRF/Gaussian Splat rendering.</p>
+								</a>
+							</article>
+						</div>
+					</section>
+
+				<!-- Two -->
 					<section id="two">
 						<h2>Publications</h2>
 						<div class="row">
@@ -203,6 +268,15 @@ eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.14474},
 year = {2022}
 }
 
+@inproceedings{neff2023psao,
+ title = {PSAO: Point-Based Split Rendering for Ambient Occlusion},
+ author = {Neff, Thomas and Budge, Bremer and Dong, Zhao and Schmalstieg, Dieter and Steinberger, Markus},
+ booktitle = {High-Performance Graphics -- Symposium Papers},
+ year = {2023},
+ publisher = {The Eurographics Association},
+ url = {https://scholar.google.com/citations?user=bZsqNhwAAAAJ},
+}
+
 @inproceedings{kurz2022adanerf,
  title = {AdaNeRF: Adaptive Sampling for Real-time Rendering of Neural Radiance Fields},
  author = {Kurz, Andreas and Neff, Thomas and Lv, Zhaoyang and Zollh\"{o}fer, Michael and Steinberger, Markus},
@@ -223,6 +297,12 @@ year = {2022}
 						<h2>Research Projects</h2>
             <div class="row">
             <article class="12u 12u$(xsmall) work-item">
+								<a href="https://github.com/facebookresearch/SplitAO3D" target="_blank" class="image fit thumb"><img src="https://raw.githubusercontent.com/facebookresearch/SplitAO3D/main/psao_teaser.png" alt="PSAO teaser" /></a>
+								<h3>PSAO: Point-Based Split Rendering for Ambient Occlusion</h3>
+								<p>A split rendering approach for ambient occlusion that offloads point-based AO queries to a server, enabling high-quality real-time AO on low-power clients. Published at High-Performance Graphics 2023 (Meta Reality Labs Research). <a href="https://diglib.eg.org/handle/10.2312/hpg.20231131" target="_blank">Paper</a> &bull; <a href="https://github.com/facebookresearch/SplitAO3D" target="_blank">Code</a></p>
+						</article>
+            <div class="row">
+            <article class="12u 12u$(xsmall) work-item">
 								<a href="https://depthoraclenerf.github.io" class="image fit thumb"><img src="images/donerf_teaser.png" alt="" /></a>
 								<h3>DONeRF: Depth Oracle Neural Radiance Fields</h3>
 								<p>By predicting discrete depth values along each ray, we can reduce the required number of samples for neural raymarching by 24-64x without sacrificing quality or compactness.</p>
@@ -240,12 +320,12 @@ year = {2022}
 								<h3>Temporally Adaptive Shading Reuse (TAS)</h3>
 								<p>Texture-space temporal reuse of full shading information, saving more than 57% of all shader invocations in VR without noticable loss in quality.</p>
 						</article>
-						<article class="6u 12u$(xsmall) work-item">
+						<article class="4u 12u$(small) work-item">
 								<a href="https://www.tugraz.at/institute/icg/research/team-steinberger/research-projects/sas/" class="image fit thumb"><img src="https://www.tugraz.at/fileadmin/_migrated/pics/teaser_small.png" alt="" /></a>
 								<h3>Shading Atlas Streaming (SAS)</h3>
 								<p>Efficient texture-space shading for virtual reality, allowing for high latencies compared to conventional streaming approaches.</p>
 						</article>
-						<article class="6u 12u$(xsmall) work-item">
+						<article class="4u 12u$(small) work-item">
 								<a href="https://github.com/thomasneff/WGAN-GP-for-Supervised-Image-Segmentation" class="image fit thumb"><img src="images/gan_augmentation_project.jpg" alt="" /></a>
 								<h3>Data Augmentation using Generative Adversarial Networks</h3>
 								<p>Experiments with Wasserstein GANs to automatically generate medical image data for deep learning.</p>
@@ -264,32 +344,32 @@ year = {2022}
 					<section id="two">
 						<h2>Game Development</h2>
 						<div class="row">
-              <article class="6u 12u$(xsmall) work-item">
+              <article class="4u 12u$(small) work-item">
 								<a href="CoreWars.html" class="image fit thumb"><img src="images/core_wars_screen.png" alt="" /></a>
 								<h3>CoreWars</h3>
 								<p>Procedurally generated Roguelike set in an engineering environment using Unity.</p>
 							</article>
-							<article class="6u 12u$(xsmall) work-item">
+							<article class="4u 12u$(small) work-item">
 								<a href="GreeneysRun.html" class="image fit thumb"><img src="images/GreeneyHeader.png" alt="" /></a>
 								<h3>Greeney's Run</h3>
 								<p>Colorful endless runner written in C for the Pebble Smartwatch.</p><br />
 							</article>
-							<article class="6u 12u$(xsmall) work-item">
+							<article class="4u 12u$(small) work-item">
 								<a href="Super1x1.html" class="image fit thumb"><img src="images/super1x1.jpeg" alt="" /></a>
 								<h3>Super 1x1</h3>
 								<p>Educational platformer with the intent to teach simple mathematics written in Objective C.</p>
 							</article>
-              <article class="6u 12u$(xsmall) work-item">
+              <article class="4u 12u$(small) work-item">
 								<a href="TileGamev3.html" class="image fit thumb"><img src="images/tilegame_v3_screen.png" alt="" /></a>
 								<h3>TileGame v3</h3>
 								<p>Third iteration of TileGame, also written in C#. Has metroidvania-style rooms and powerups to progress.</p>
 							</article>
-              <article class="6u 12u$(xsmall) work-item">
+              <article class="4u 12u$(small) work-item">
 								<a href="TileGamev2.html" class="image fit thumb"><img src="images/tilegame_v2_level.png" alt="" /></a>
 								<h3>TileGame v2</h3>
 								<p>Second iteration of TileGame, also written in C#. Has scrolling levels, level editor, and better physics. </p>
 							</article>
-              <article class="6u 12u$(xsmall) work-item">
+              <article class="4u 12u$(small) work-item">
 								<a href="TileGamev1.html" class="image fit thumb"><img src="images/tilegame_v1_level.png" alt="" /></a>
 								<h3>TileGame v1</h3>
 								<p>My first 2D platformer project, written in C#.</p>
@@ -301,20 +381,16 @@ year = {2022}
           
           <section id="two">
 						<h2>Music</h2>
-            I love listening to music (mostly progressive metal and video game music) as well as composing own songs. I've been playing the guitar for a long time now, and I'm familiar with basic Audio Engineering and production methods.
-            
-            <strong>Guitars:</strong>
-            <p>Schecter BlackJack ATX C-1 ABS<br />
-               Ibanez RGA7</p>
-               
-            <strong>Monitors:</strong>
-            <p>Yamaha HS7<br />
-            Audio-Technica ATH-M50 Headphones</p>
-            
-            <strong>Interface:</strong>
-            <p>Focusrite Scarlett 2i2</p>
-            
-            <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/241114204&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+						<p>I love listening to music (mostly progressive metal and video game music) as well as composing my own songs. I've been playing guitar for a long time now, and I'm familiar with basic audio engineering and production.</p>
+						<p><strong>Guitars:</strong><br />
+						Schecter BlackJack ATX C-1 ABS<br />
+						Ibanez RGA7</p>
+						<p><strong>Monitors:</strong><br />
+						Yamaha HS7<br />
+						Audio-Technica ATH-M50 Headphones</p>
+						<p><strong>Interface:</strong><br />
+						Focusrite Scarlett 2i2</p>
+						<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/241114204&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 						
 							
 					
@@ -335,13 +411,11 @@ year = {2022}
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="https://twitter.com/thomasneff93" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://linkedin.com/in/thomasneff93" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://github.com/thomasneff" class="icon fa-github"><span class="label">Github</span></a></li>
-            <li><a href="https://soundcloud.com/thomasneff" class="icon fa-soundcloud"><span class="label">Soundcloud</span></a></li>
+						<li><a href="https://twitter.com/thomasneff93" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://soundcloud.com/thomasneff" class="icon fa-soundcloud"><span class="label">Soundcloud</span></a></li>
 						<li><a href="mailto:thomasneff93@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>Image: &copy; Kanizaj - TU Graz</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>
@@ -353,7 +427,7 @@ year = {2022}
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 			<script type="text/javascript" src="assets/js/bib-list.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function() {
@@ -367,5 +441,17 @@ year = {2022}
 				});
 			</script>
 
+		<script>
+			(function() {
+				var slides = document.querySelectorAll('#header-slideshow .slide');
+				var current = 0;
+				if (slides.length < 2) return;
+				setInterval(function() {
+					slides[current].classList.remove('active');
+					current = (current + 1) % slides.length;
+					slides[current].classList.add('active');
+				}, 6000);
+			})();
+		</script>
 	</body>
 </html>
